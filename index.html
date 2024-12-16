@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Styling -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #2C3E50, #000000);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        /* Animated Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 223, 0, 0.1), transparent);
+            animation: move-bg 10s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes move-bg {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Heading Styles */
+        h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 165, 0, 0.6);
+            animation: fade-in 2s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(-30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #F0E68C;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            animation: slide-up 1.5s ease-in-out;
+        }
+
+        @keyframes slide-up {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Button Styling */
+        .logout-btn {
+            margin-top: 30px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #000;
+            background: linear-gradient(to right, #FFD700, #FF8C00);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .logout-btn:hover {
+            background: linear-gradient(to right, #FF8C00, #FFD700);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 165, 0, 0.8);
+        }
+
+     
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Admin Dashboard</h2>
+    <p>You have successfully logged in. Enjoy your stay!</p>
+
+    <!-- Logout Button -->
+    <a href="login.php" class="logout-btn">Logout</a>
+
+   
+</body>
+</html>
